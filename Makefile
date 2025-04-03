@@ -23,7 +23,7 @@ format: ## Format the project using cargo
 	@rustup component add rustfmt> /dev/null
 	cargo fmt
 
-bump: ## Bump the version using cargo
+bump: ## Bump the version number
 	@echo "Current version is $(shell cargo pkgid | cut -d# -f2)"
 	@read -p "Enter new version: " version; \
 	updated_version=$$(cargo pkgid | cut -d# -f2 | sed 's/^[^0-9]*//'); \
